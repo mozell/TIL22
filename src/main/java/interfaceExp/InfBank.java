@@ -16,4 +16,11 @@ public interface InfBank {
         System.out.println(bankName+ " 에서 인증 요청.");
         // 로직 수행...
     }
+
+    // 휴면계좌 찾기 서비스 - 디폴트 메소드 제공
+    default String findDormancyAccount(String custId) {
+        System.out.println("** 휴면계좌 찾기 서비스 **");
+        // 기본 제공 로직
+        return "[" + custId + "] ####-###-######";
+    }
 }
